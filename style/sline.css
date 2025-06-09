@@ -1,0 +1,70 @@
+#boxcom{
+    background-color: blue;
+    z-index: 0;
+    position: relative;
+    left: 20%;
+    transition: 0.5s;
+}
+
+.chapbox{
+    
+    
+    background-color: rgb(207, 207, 207);
+
+
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: 2px solid black;
+    border-radius: 5px;
+
+    margin-bottom: 50px;
+}
+.imgchap{
+    height: 95%;
+    
+    position: relative;
+    left: 2.5%;
+    top: 2.5%;
+}
+.texdow{
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    font-size: 20px;
+
+    position:absolute;
+top: 100%;
+    border-bottom: 3px solid black;
+    
+}
+.boxzoom{
+    width: 100px;
+    height: 50px;
+    z-index: 20;
+    position:fixed;
+    top: 0%;
+    left: 20%;
+
+}
+.butzo{
+    background-color: azure;
+    height: 100%;
+    width: 48%;
+    position: absolute;
+    border-radius: 10px;
+    background-color: burlywood;
+    font-size: 100%;
+    border: 2px solid black;
+    transition: 0.2s;
+}
+.butzo:hover{
+    cursor: pointer;
+}
+.butzo:active{
+    background-color: rgb(170, 142, 104);
+}
+#zoomout{
+    left: 51%;
+}
+
