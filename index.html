@@ -1,38 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Trang chủ | DIARYLIVE</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
+    <link rel="stylesheet" href="style/idens.css">
+    <link rel="icon" type="image/x-icon" href="texture/lockic.png">
+
 </head>
-<body>
-    
-    <div class="op">
-        <h1>Holo-Stories</h1>
-        <p>nơi bí ẩn bắt đầu</p>
+<body >
+    <div style="background-color: aqua;width: 90%;aspect-ratio: 893/467;position: relative;left: 5%;border: 5px,solid,rgb(255, 16, 127);display: flex;">
+
+        <img src="texture/nice.png" alt="" width="100%" height="100%">
+<div style="width: 100%;height: 15%;background-color: rgba(0, 0, 0, 0.5);position: absolute;top: 85%;"></div>
+        <div style="width: 100%;height: 15%;background-color: rgba(0, 0, 0, 0.5);position: absolute;"></div>
+
+        <div class="op">
+        <h1 class="canop" id="showop">DIARYLIVE</h1>
+        <p class="canop" id="hayop">(nhật ký thần tượng)</p>
+        </div>
     </div>
+    
 
     <div class="gioithieu">
-<h3>Giới thiệu</h3>
-<p> welcome welcome, 
-    mọi người có thể gọi tôi là room hay surk hoặc gì cũng được ;v.
-     Đây là nơi tôi vẽ truyện 'Fanfic' và muốn chia sẽ cho mọi người trãi nghiệm.
-      Chủ yếu cho việc này là tôi là một người lọt hố (yea chắc chắn r) và cũng rất ấn tượng với các lore của mấy gái và cũng một phần tôi muốn cải thiện kỹ năng vẽ vời của mình (nên truyện sẽ xấu vl mn hoan hỉ). 
+<h1>Giới thiệu</h1>
+<p style="font-size: 20px;"> welcome welcome, 
+    Bạn có thể gọi tôi là room hay surk hoặc gì cũng được ;v.
+     Đây là nơi tôi vẽ truyện 'Fanfic' và muốn chia sẽ cho bạn trải nghiệm.
+      Chủ yếu cho việc này là rãnh và cũng rất ấn tượng với các lore của mấy gái và cũng một phần tôi muốn cải thiện kỹ năng vẽ vời của mình (nên truyện sẽ xấu vl hoan hỉ). 
       Giới thiệu sơ qua về Truyện, các nhân vật sẽ được lấy chủ yếu từ talents Hololive English, câu truyện sẽ không có chiều sâu và mục đích rõ ràng nên hãy vô tree mà đọc
-      . Truyện sẽ không thống nhất về bố cục, chủ yếu là các mẫu truyện nhỏ về mỗi nhân vật nhưng sẽ có phần nào đó liên kết với nhau. Mỗi tính cách hay khả năng của nhân vật sẽ không hoàn toàn trong lore gốc của hololive (mà tôi bịa vài cái ;v).</p>
+      . Truyện sẽ không thống nhất về bố cục, chủ yếu là các mẫu truyện nhỏ về mỗi nhân vật nhưng sẽ có phần nào đó liên kết với nhau. Mỗi tính cách hay khả năng của nhân vật sẽ không hoàn toàn trong lore gốc của hololive (mà tôi bịa vài cái ;v)</p>
       <p>Lưu ý tôi không phải họa sĩ hay nhà văn nên nó lỏ đừng trách không báo trước...</p>
 
     </div>
 
+
+    <h1>Kho truyện :</h1>
+    <div id="allstori" style="width: 100%;position: relative;margin-top: 20px;">
+        
+       
+    </div>
+    <div id="spac">
+
+    </div>
+    <script>
+        const cars = [
+            "inkdReact",
+            "wriseclock",
+            "kriller",
+            "ave",
+            "juy",
+            "rai",
+            "train",
+        ];
+        const nems = [
+            "Công chúa mơ mộng",
+            "Phồn hoa phủ bóng",
+            "Kỷ sỹ ái kỵ",
+
+            "Phản chiếu trái tim",
+            "Thủy ngân dối trá",
+            "phù sa hạnh phúc",
+            "Than đá sao băng",
+        ];
+
+    let maxsl = 2
+        
+
+        
+      
+
+        
+        let change = [0,0]
+        for (let i = 0; i <= maxsl   ; i++) {
+            
+            
+            
+
+            let stori = document.createElement("div");
+            stori.setAttribute("class","boxstori");
+            stori.setAttribute("id",cars[i]);
+            document.getElementById("allstori").appendChild(stori);
+            stori.style.top = ((100*change[0])+"%");
+            let strd = (330*(change[0]+1))+"%"
+            document.getElementById("allstori").style.aspectRatio = (2000/477);
+            if (change[1] == 1) {
+                change[1] = 0
+                change[0] +=1
+                stori.style.left = "54%";
+            } else {
+                change[1] +=1
+
+                if (change[0] >0) {
+                    stori.style.left = "0";
+
+                    let trura = document.createElement("div");
+                    trura.style.width = "100%";
+                    trura.style.aspectRatio = (2000/477);
+                    document.getElementById("spac").appendChild(trura);
+                }
+                
+            }
+           
+
+            let nguon = "stobook/"+cars[i]+"/thum.png"
+            
+            let elem = document.createElement("img");
+            elem.setAttribute("src", nguon);
+            
+            
+            elem.setAttribute("alt", ("stori"+i));
+            elem.setAttribute("class","thumnail");
+            stori.appendChild(elem);
+
+            let tex = document.createElement("div");
+            tex.setAttribute("class","texst");
+
+            tex.innerHTML = nems[i];
+            stori.appendChild(tex);
+
+
+            let note = document.createElement("iframe");
+            note.setAttribute("class","notest");
+            stori.appendChild(note);
+            let nguon2 = "stobook/"+cars[i]+"/note.html"
+            note.setAttribute("src",nguon2);
+            
+            let linklist = "stobook/"+cars[i]+"/listchap.html"
+
+            let butd = document.createElement("a");
+            butd.setAttribute("href",linklist);
+            butd.innerHTML = "Đọc"
+            butd.setAttribute("class","buton");
+            stori.appendChild(butd);
+            
+
+        }
+       
+    </script>
+
     <h3>Liên kết :</h3>
-    <div>
-        <a target="_blank" href="https://www.youtube.com/@hololiveEnglish">Youtube Hololive</a>
-        <br>
-        <a target="_blank" href="https://x.com/hololive_En">X Hololive</a>
-        <hr>
-        <a target="_blank" href="https://www.facebook.com/dong.chau.77582359">in4 thằng làm cái này</a>
+    <div style="background-color: rgb(184, 253, 210);padding: 20px;border: 2px,solid,black;">
+        <h4>thông tin Hololive :</h4>
+        <u>
+            <li><a target="_blank" href="https://www.youtube.com/@hololiveEnglish">Youtube Hololive</a></li>
+            <li><a target="_blank" href="https://x.com/hololive_En">X Hololive</a></li>
+            <li><a target="_blank" href="https://hololive.hololivepro.com/en/talents">Hololive talents</a></li>
+        </u>
+        <h4>thông tin tác giả :</h4>
+        <u>
+            <li><a target="_blank" href="https://www.facebook.com/dong.chau.77582359">facebook tác giả</a></li>
+            <li>Mail : surkroom@gmail.com</li>
+            
+        </u>
+    
+        
     </div>
     
-    <a target="_blank" href="stobook/inkdReact/read.html">read</a>
+
 </body>
 </html>
