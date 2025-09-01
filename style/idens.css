@@ -1,0 +1,171 @@
+.op {
+    border: 5px,rgba(230, 48, 109, 0.514) , dashed;
+
+    
+    position: absolute;
+    width: 70%;
+    left: 15%;
+    height: 60%;
+    top: 20%;
+    
+    text-align: center;
+}
+#showop{
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    left: 10%;
+    top: 5%;
+    background-color: rgba(0, 0, 255, 0.35);
+    font-size:14vb;
+    color: white;
+
+    
+    -webkit-text-stroke: 3px;
+    -webkit-text-stroke-color: black;
+
+    font-weight: 900;
+
+    
+}
+
+#hayop{
+    position: absolute;
+    width: 80%;
+    height: 30%;
+    left: 10%;
+    top: 35%;
+    color: rgb(0, 255, 221);
+    font-style: italic;
+    font-size:7vb;
+    background-color: rgba(255, 0, 43, 0.35);
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: rgb(3, 0, 48);
+    font-weight: 900;
+}
+.gioithieu {
+    margin-top: 10px;
+    border: 3px,solid,rgb(48, 120, 230) ;
+
+    
+    
+}
+h4{
+    margin: 0;
+}
+.reslet{
+    width: 100%;
+    background-color: aqua;
+}
+.boxstori {
+ 
+    position: absolute;
+
+    border: 5px,black ;
+    border-bottom-style: dashed;
+    width: 45%;
+    aspect-ratio: 1000/485;
+    
+    margin: 0px;
+    transition: 0.4s;
+
+}
+.boxstori:hover {
+    scale: 1.01;
+    border: solid,5px,rgb(255, 0, 149);
+    
+}
+
+.thumnail {
+   position: absolute;
+    
+    width: 30%;
+    
+    border: solid,rgb(0, 0, 0),3px;
+}
+
+
+.texst{
+    position: absolute;
+    left:30% ;
+    width: 70%;
+    background-image: linear-gradient(to right, rgb(248, 35, 64) , rgba(255, 0, 34, 0));
+    font-size: 10px;
+
+    
+    font-weight: 900;
+    border: rgb(184, 4, 49),5px;
+
+    border-bottom-style:solid;
+
+    font-size: 6vb;
+
+    
+    padding: 0;
+
+    font-style: italic;
+
+    height: 25%;
+}
+.notest {
+   position: absolute;
+    
+    width: 68%;
+    
+    border-style: none; 
+    left: 32%;
+    top: 25%;
+    height: 55%;
+    border-bottom-style:dashed;
+
+
+}
+.buton {
+   position: absolute;
+    
+    width: 50%;
+    
+    border-style: none; 
+    left: 37%;
+    top: 84%;
+    height: 12%;
+
+    background-color: brown;
+    text-align: center;
+    border-radius: 5px;
+
+    color: black;
+
+    font-size: 5vb;
+    font-weight: 900;
+    text-decoration:none;
+    transition: 0.3s;
+}
+.buton:after{
+    color: black;
+}
+.buton:link{
+    color: black;
+}
+.buton:visited{
+    color: black;
+}
+.buton:hover{
+    border: solid,2px,rgb(0, 0, 0);
+    scale: 1.01;
+background-image: linear-gradient(to right, rgb(248, 35, 64) , rgba(255, 0, 34, 0));
+background-color: aquamarine;
+}
+
+
+
+#noteskibidi {
+
+    
+    margin: 0px;
+
+    font-size:10vb;
+
+    font-style: italic;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+}

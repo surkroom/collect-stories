@@ -1,0 +1,116 @@
+.box{
+    width: 99%;
+
+    aspect-ratio: 1000/242.5;
+
+    background-image: linear-gradient( rgb(148, 164, 255),rgba(175, 177, 255, 0));
+
+    position: absolute;
+
+    display: flex;
+    margin-left: 1%;
+}
+.box2{
+    width: 100%;
+
+    aspect-ratio: 1000/242.5;
+}
+.thum{
+    position: absolute;
+    width: 15%;
+    border: 3px,solid,blue;
+}
+#tex{
+    margin-left: 1%;
+}
+.tex {
+    position: absolute;
+    left: 15%;
+    width: 70%;
+    height: 30%;
+    background-image: linear-gradient(to right, rgb(248, 35, 64) , rgba(255, 0, 34, 0));
+
+    font-size: 6vb;
+    top: -11.5%;
+    
+}
+.note {
+    position: absolute;
+    left: 15%;
+    width: 70%;
+    height: 70%;
+    top: 30%;
+
+    
+    
+}
+#chaplis{
+    
+
+    width: 25%;
+    height: 35px;
+    position: absolute;
+    left: 10px;
+}
+.outbut {
+    font-size:4vb;
+
+    background-color: rgba(255, 90, 145, 0.575);
+    text-decoration:none;
+    transition: 0.5s;
+    color: black;
+
+    margin: 1%;
+
+    position: relative;
+    top: 15px;
+    border-radius: 5px;
+    padding: 10px;
+}
+.outbut:visited {color: black;}
+.outbut:hover {background-color: rgb(255, 0, 85);}
+
+.buton {
+   position: absolute;
+    
+    width: 150%;
+    
+    border-style: none; 
+    height: 100%;
+
+    background-color: rgb(140, 155, 236);
+    text-align: left;
+    border-radius: 5px;
+
+    color: black;
+
+    font-size: 5vb;
+    font-weight: 900;
+    text-decoration:none;
+    transition: 0.5s;
+    padding: 5px;
+}
+.buton:after{
+    color: black;
+}
+.buton:link{
+    color: black;
+}
+.buton:visited{
+    color: black;
+}
+.buton:hover{
+    width: 160%;
+    
+    background-image: linear-gradient(to right, rgb(248, 35, 64) , rgba(255, 0, 34, 0));
+
+   
+}
+
+.box4{
+    width: 300%;
+    position: absolute;
+    height: 200px;
+    
+    z-index: 100;
+}

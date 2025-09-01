@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INREAD-CHAP</title>
+
+    <link rel="stylesheet" href="../../../style/sline.css">
+    <link rel="icon" type="image/x-icon" href="../../../texture/lockic.png">
+</head>
+<body id="main">
+   
+       
+    <button class="butzo" id="zoomin" onclick="ind()">+</button>
+    <button class="butzo"  id="zoomout" onclick="out()">-</button>
+        
+    
+<a class="outbut" href="../listchap.html">Danh sách</a>
+
+    <div id="boxcom" style="height: 0vh;width: 0vh;">
+
+        
+
+    </div>
+
+    
+
+    <script>
+       let maxsl = 15
+        for (let i = 1; i <= maxsl   ; i++) {
+
+
+
+            let chap = document.createElement("div");
+            chap.setAttribute("class","chapbox");
+
+            document.getElementById("boxcom").appendChild(chap);
+            let nameam = "dataimg/chap"+i+".png"
+            let elem = document.createElement("img");
+            elem.setAttribute("src",nameam );
+            
+            
+            elem.setAttribute("alt", ("trang"+i));
+            elem.setAttribute("class","imgchap")
+            chap.appendChild(elem);
+
+
+            
+
+            let dowd = document.createElement("br")
+            chap.appendChild(dowd);
+            let tex = document.createElement("p")
+            chap.appendChild(tex)
+            tex.setAttribute("class","texdow")
+            tex.innerHTML = "Trang :"+i+" / "+maxsl
+            
+        }
+
+        let endh = document.createElement("p");
+        endh.innerHTML = "---HẾT---";
+        endh.style.textAlign = "Center";
+        endh.style.position = "relative";
+        endh.style.top = "50px"
+        endh.style.fontSize = "50px"
+        document.getElementById("boxcom").appendChild(endh);
+
+        let opsiH = 250
+        function autosetsize () {
+            
+            let chil = document.getElementById("boxcom")
+            chil.style.height = opsiH+"vh"
+            chil.style.width = (opsiH*(1299/2067))+"vh"
+            
+        }
+        function ind (){
+            if (opsiH+10 <=250) {
+                opsiH =opsiH+10;
+            }
+            
+        }
+        function out (){
+            if (opsiH-10 >=90) {
+                opsiH =opsiH-10;
+            }
+            
+        }
+
+        setInterval(autosetsize,0)
+    </script>
+    
+</body>
+</html>

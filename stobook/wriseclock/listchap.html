@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>storilist</title>
+    <link rel="stylesheet" href="../../style/childchap.css">
+<link rel="icon" type="image/x-icon" href="../../texture/lockic.png">
+</head>
+<body style="margin: 0;">
+
+
+    <a class="outbut" href="../../index.html">Trang chủ</a>
+
+    <h1 id = "tex">#truyện dài</h1>
+
+    <div class = "box">
+        <img src="thum.png" alt="" class="thum">
+
+        <p class="tex">Phồn hoa phủ bóng</p>
+
+        <iframe src="note.html" frameborder="0" class = "note"></iframe>
+    </div>
+    <div class = "box2"></div>
+    <h2 style="margin-left: 10px;">danh sách chapter :</h2>
+
+    <div id="chaplis">
+
+        <div class="box4" id="box4">
+        </div>
+    </div>
+    
+    <script>
+        let maxslg = 0
+        for (let i = 0; i <= maxslg   ; i++) {
+            let butds = document.createElement("a");
+
+            butds.setAttribute("class","buton");
+            butds.style.top = (i*60)+"px"
+            butds.innerHTML = "Chapter : "+(i+1);
+            document.getElementById("chaplis").appendChild(butds);
+
+            let linklist = "chap"+(i+1)+"/read.html"
+            butds.setAttribute("href",linklist);
+            
+        }
+        document.getElementById("box4").style.top = (((maxslg+1)*60)+"px");
+        
+        
+    </script>
+    
+</body>
+</html>
