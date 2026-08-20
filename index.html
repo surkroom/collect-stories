@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Trang chủ | DIARYLIVE</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/idens.css">
+    <link rel="icon" type="image/x-icon" href="texture/lockic.png">
+
+</head>
+<body >
+
+    <div class="Menu">
+        <a href="#IntroFlex" class="menubut">Lời nói đầu</a>
+        <a href="#Rule" class="menubut">Hướng dẫn</a>
+    </div>
+
+    <div style="background-color: aqua;width: 90%;aspect-ratio: 893/467;position: relative;left: 5%;border: 5px,solid,rgb(255, 16, 127);display: flex;">
+
+        <img src="texture/nice.png" alt="" width="100%" height="100%">
+        <div style="width: 100%;height: 15%;background-color: rgba(0, 0, 0, 0.5);position: absolute;top: 85%;"></div>
+        <div style="width: 100%;height: 15%;background-color: rgba(0, 0, 0, 0.5);position: absolute;"></div>
+        <div class="op">
+        <h1 class="canop" id="showop">DIARYLIVE</h1>
+        <p class="canop" id="hayop">(nhật ký thần tượng)</p>
+        </div>
+    </div>
+    <div class="gioithieu" id="IntroFlex">
+    <h1>Lời nói đầu:</h1>
+<p style="font-size: 20px;"> welcome welcome, 
+    Bạn có thể gọi tôi là room hay surk hoặc gì cũng được ;v.
+     Đây là nơi tôi vẽ truyện 'Fanfic' và muốn chia sẽ cho bạn trải nghiệm.
+      Chủ yếu cho việc này là rãnh và cũng rất ấn tượng với các lore của mấy gái và cũng một phần tôi muốn cải thiện kỹ năng vẽ vời của mình (nên truyện sẽ xấu vl hoan hỉ). 
+      Giới thiệu sơ qua về Truyện, các nhân vật sẽ được lấy chủ yếu từ talents Hololive English, câu truyện sẽ không có chiều sâu và mục đích rõ ràng nên hãy vô tree mà đọc
+      . Truyện sẽ không thống nhất về bố cục, chủ yếu là các mẫu truyện nhỏ về mỗi nhân vật nhưng sẽ có phần nào đó liên kết với nhau. Mỗi tính cách hay khả năng của nhân vật sẽ không hoàn toàn trong lore gốc của hololive (mà tôi bịa vài cái ;v)</p>
+      <p>Lưu ý tôi không phải họa sĩ hay nhà văn nên nó lỏ đừng trách không báo trước...</p>
+
+    </div>
+    <div class="gioithieu" id="Rule">
+    <h1>Hướng dẫn:</h1>
+        <ul style="font-size: 20px;">
+            <ol>Đọc từ phải sang trái , từ trên xuống dưới</ol>
+            <ol>Khung thoại tròn biểu đạt lời nhân vật</ol>
+            <ol>Khung thoại vuông biểu đạt suy nghĩ nhân vật hoặc người dẫn truyện</ol>
+            <ol>với chữ không có khung thì biểu thị cho mô tả âm thanh</ol>
+
+            <ol>lưu ý một số sẽ không theo nguyên tác trên mà biến tấu tùy thuộc...</ol>
+        </ul>
+
+    </div>
+
+    <h1>Kho truyện :</h1>
+    <div id="allstori" style="width: 100%; margin-top: 20px;">
+        
+       
+    </div>
+    <script>
+        const cars = [
+            "inkdReact",
+            "rain",
+           
+        ];
+        const nems = [
+            "Công chúa mơ mộng",
+            "Mây Vũ Sắc",
+        ];
+
+    let maxsl = 1
+        let change = [0,0]
+        for (let i = 0; i <= maxsl   ; i++) {
+            
+            
+            
+
+            let stori = document.createElement("div");
+            stori.setAttribute("class","boxstori");
+            stori.setAttribute("id",cars[i]);
+            document.getElementById("allstori").appendChild(stori);
+            
+            
+
+            
+
+            let info = document.createElement("div");
+            stori.appendChild(info);
+            info.setAttribute("class","informan");
+            let tex = document.createElement("div");
+            tex.setAttribute("class","texst");
+
+            tex.innerHTML = nems[i];
+            info.appendChild(tex);
+
+
+            let note = document.createElement("iframe");
+            note.setAttribute("class","notest");
+            info.appendChild(note);
+            let nguon2 = "stobook/"+cars[i]+"/note.html"
+            note.setAttribute("src",nguon2);
+            
+            let linklist = "stobook/"+cars[i]+"/listchap.html"
+
+            let butd = document.createElement("a");
+            butd.setAttribute("href",linklist);
+            butd.innerHTML = "Đọc"
+            butd.setAttribute("class","buton");
+            info.appendChild(butd);
+            
+            let nguon = "stobook/"+cars[i]+"/thum.png"
+            
+            let elem = document.createElement("img");
+            elem.setAttribute("src", nguon);
+            
+            
+            elem.setAttribute("alt", ("stori"+i));
+            elem.setAttribute("class","thumnail");
+            stori.appendChild(elem);
+        }
+       
+    </script>
+
+    <h3>Liên kết :</h3>
+    <div style="background-color: rgb(184, 253, 210);padding: 20px;border: 2px,solid,black;">
+        <h4>thông tin Hololive :</h4>
+        <u>
+            <li><a target="_blank" href="https://www.youtube.com/@hololiveEnglish">Youtube Hololive English</a></li>
+            <li><a target="_blank" href="https://www.youtube.com/@hololive">Youtube Hololive</a></li>
+            <li><a target="_blank" href="https://x.com/hololive_En">X Hololive</a></li>
+            <li><a target="_blank" href="https://hololive.hololivepro.com/en/talents">Hololive talents</a></li>
+        </u>
+        <h4>thông tin tác giả :</h4>
+        <u>
+            <li><a target="_blank" href="https://www.facebook.com/dong.chau.77582359">facebook tác giả</a></li>
+            <li><a target="_blank" href="https://www.instagram.com/tom_man_cuc/">Instagram tác giả</a></li>
+            <li>Mail : surkroom@gmail.com</li>
+            
+        </u>
+    
+        
+    </div>
+    
+
+</body>
+</html>
