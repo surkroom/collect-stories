@@ -47,10 +47,10 @@
 #chaplis{
     
 
-    width: 100%;
+    width: 99%;
     height: 35px;
     position: absolute;
-    left: 10px;
+    left: 1%;
 }
 .outbut {
     font-size:4vb;
